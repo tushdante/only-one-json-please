@@ -1,0 +1,20 @@
+{
+  "name": "only-one-json-please",
+  "version": "1.0.0",
+  "description": "Concatenates all JSON files within a directory into one file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "concatenate"
+  ],
+  "author": "Matt Hamil <mhamildev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.0.6",
+    "jsonfile": "^2.3.1",
+    "request": "^2.74.0"
+  }
+}
