@@ -1,6 +1,6 @@
 {
   "name": "only-one-json-please",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Concatenates all JSON files within a directory into one file",
   "main": "index.js",
   "bin": {
