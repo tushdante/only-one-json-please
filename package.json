@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Concatenates all JSON files within a directory into one file",
   "main": "index.js",
+  "bin": {
+    "jsonconcat": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +18,7 @@
   "dependencies": {
     "glob": "^7.0.6",
     "jsonfile": "^2.3.1",
-    "request": "^2.74.0"
+    "request": "^2.74.0",
+    "shelljs": "^0.7.4"
   }
 }
