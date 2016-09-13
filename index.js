@@ -8,7 +8,6 @@ const glob = require('glob');
 
 shell.exec('echo "Concatenating files in the current directory..."');
 
-module.exports = function() {
   glob(`${__dirname}/*.json`, function (err, files) {
     if (err) {
       console.log(`ERROR: Unable to read the folder: ${__dirname}`, err);
@@ -29,4 +28,3 @@ module.exports = function() {
       });
     });
   });
-};
