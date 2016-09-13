@@ -6,7 +6,7 @@ const request = require('request');
 const jsonfile = require('jsonfile');
 const glob = require('glob');
 
-shell.exec('Concatenating files in the current directory...');
+shell.exec('echo "Concatenating files in the current directory..."');
 
 module.exports = function() {
   glob(`${__dirname}/*.json`, function (err, files) {
