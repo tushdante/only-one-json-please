@@ -4,7 +4,7 @@ A small npm script to concatenate all JSON files in the same directory into one 
 
 ## Installation
 
-`npm install only-one-json-please`
+`npm install -g only-one-json-please`
 
 ## Usage
 Navigate to the directory containing your JSON files and run `jsonconcat`.
