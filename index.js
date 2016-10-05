@@ -22,7 +22,8 @@ glob(`${process.cwd()}/*.json`, function (err, files) {
       let obj = JSON.parse(data);
 
       Object.keys(obj).forEach((key) => {
-        masterObj[key] = obj[key];
+        if (key in masterObj) masterObj[key] += obj[key];
+        else masterObj[key] = obj[key];
         jsonfile.writeFileSync(`${process.cwd()}/output.json`, masterObj);
       });
     });
