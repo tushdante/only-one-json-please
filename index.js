@@ -22,8 +22,17 @@ glob(`${process.cwd()}/*.json`, function (err, files) {
       let obj = JSON.parse(data);
 
       Object.keys(obj).forEach((key) => {
-        if (key in masterObj) masterObj[key] += obj[key];
-        else masterObj[key] = obj[key];
+        // split the key by '_', so name_1 => ['name', '1']
+        // if no trailing 1's add an _1
+        // else increment _1 => _2
+
+        var masterKey = key
+        if (key in masterObj) {
+          if (key.split("_").length == 1) masterKey = key + "_" + 1
+          else masterKey = masterKey + (parseInt(key.split("_")[1])+1).toString()
+          masterObj[masterKey] = obj[key];
+        }
+        else masterObj[masterKey] = obj[key];
         jsonfile.writeFileSync(`${process.cwd()}/output.json`, masterObj);
       });
     });
